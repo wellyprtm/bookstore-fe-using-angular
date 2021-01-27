@@ -15,7 +15,7 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let prd of productList">
-                        <td><img src="{{prd.productImgLocation}}" width="75" height="90" /></td>
+                        <td><img src="{{prd.productImgLocation}}" routerLink="/" width="75" height="90" /></td>
                         <td>{{prd.productTitle}}</td>
                         <td>{{prd.productAuthor}}</td>
                         <td>{{prd.productPrice | currency:'Rp. '}} </td>
