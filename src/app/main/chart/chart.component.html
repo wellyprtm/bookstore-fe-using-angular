@@ -1,0 +1,35 @@
+
+<div class="row">
+    <div class="container">
+        <div class="row justify-content-center">
+            <h1 class="m-5">SHOPPING CART</h1>
+            <table class="table m-2 shadow table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Picture</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Author</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let prd of productList">
+                        <td><img src="{{prd.productImgLocation}}" width="75" height="90" /></td>
+                        <td>{{prd.productTitle}}</td>
+                        <td>{{prd.productAuthor}}</td>
+                        <td>{{prd.productPrice | currency:'Rp. '}} </td>
+                        <td><button (click)="deleteItem(prd)" class="btn btn-outline-dark"><fa-icon [icon]="faEraser" size="1x" [fixedWidth] = "true"></fa-icon></button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>TOTAL PRICE</td>
+                        <td>{{getTotalPrice() | currency:'Rp. '}}</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

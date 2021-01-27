@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <a class="navbar-brand" href="#">
+        <img src="../../../../assets/img/logo.png" width="75" height="55" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a [routerLink] = "['/home']" routerLinkActive="active-link" class="nav-link" href="#"><fa-icon [icon]="faHome" size="1x" [fixedWidth] = "true"></fa-icon>HOME</a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink] = "['/catalog']" routerLinkActive="active-link" class="nav-link" href="#"><fa-icon [icon]="faCatalog" size="1x" [fixedWidth] = "true"></fa-icon>CATALOG</a>
+        </li>
+      </ul>
+      <div class="nav-link cart-value">{{this.productService.getCartProduct().length}}</div>
+      <div>
+        <a class="nav-link cart-design" [routerLink] = "['/chart']" routerLinkActive="active-link"><fa-icon [icon]="faShoppingCart" size="1x" [fixedWidth] = "true"></fa-icon>SHOPPING LIST</a>
+      </div>
+    </div>
+</nav>
